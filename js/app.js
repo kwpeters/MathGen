@@ -7,7 +7,8 @@
 angular.module(
     'mathGenApp',
     [
-        'ui.router'
+        'ui.router',
+        'homeCtrlModule'
     ]
 ).config(
     [
@@ -23,8 +24,8 @@ angular.module(
 
             $stateProvider.state('home', {
                 url: '/home',
-                templateUrl: 'views/home.html'//,
-                //controller: 'HomeCtrl'
+                templateUrl: 'views/home.html',
+                controller: 'homeCtrl'
             });
 
             $urlRouterProvider.otherwise('/home');

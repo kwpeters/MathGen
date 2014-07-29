@@ -1,6 +1,92 @@
 <!--
 Home view
 -->
-<p>
-    This is the home view.
-</p>
+
+<div class="panel panel-default">
+
+    <div class="panel-body">
+
+        <form novalidate>
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <h4>Addition</h4>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <label for="additionNum">Number of problems</label>
+                            <input id="additionNum" class="form-control" type="number" autofocus="true"  ng-model="model.addition.num"
+                                   min="0" max="100">
+                        </div>
+
+                        <fieldset ng-disabled="noAdditionProblems()">
+                            <div class="form-group" >
+                                <label for="additionMinValue">Minimum value</label>
+                                <input id="additionMinValue" class="form-control" type="number" ng-model="model.addition.minValue">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="additionMaxValue">Maximum value</label>
+                                <input id="additionMaxValue" class="form-control" type="number" ng-model="model.addition.maxValue">
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <hr/>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2"><h4>Subtraction</h4></div>
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <label for="subtractionNum">Number of problems</label>
+                            <input id="subtractionNum" class="form-control" type="number" ng-model="model.subtraction.num"
+                                   min="0" max="100">
+                        </div>
+
+                        <fieldset ng-disabled="noSubtractionProblems()">
+                            <div class="form-group">
+                                <label for="subtractionMinValue">Minimum value</label>
+                                <input id="subtractionMinValue" class="form-control" type="number" ng-model="model.subtraction.minValue">
+                            </div>
+                            <div class="form-group">
+                                <label for="subtractionMaxValue">Maximum value</label>
+                                <input id="subtractionMaxValue" class="form-control" type="number" ng-model="model.subtraction.maxValue">
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="model.subtraction.allowNegativeAnswers">
+                                    Allow negative answers
+                                </label>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <button ng-click="reset()" class="btn-sm btn-default">Reset</button>
+                </div>
+                <div class="col-md-7">
+                </div>
+                <div class="col-md-2 text-right">
+                    <button ng-click="submit()" class="btn-lg btn-primary btn-block">Continue</button>
+                </div>
+
+            </div>
+
+
+
+
+        </form>
+
+    </div>
+
+</div>
