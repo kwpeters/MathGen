@@ -23,7 +23,7 @@ angular.module(
 
             $stateProvider.state('home', {
                 url: '/home',
-                templateUrl: 'views/home.html'//,
+                templateUrl: 'js/views/home.html'//,
                 //controller: 'HomeCtrl'
             });
 
