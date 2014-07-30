@@ -4,5 +4,8 @@
 # IDE specific Files
 .idea
 
-# Libraries
-/bower_components/
+# Server libraries
+/node_modules/
+
+# Client libraries
+/www/bower_components/
