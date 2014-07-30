@@ -17,19 +17,19 @@ Home view
                     <div class="col-md-10">
                         <div class="form-group">
                             <label for="additionNum">Number of problems</label>
-                            <input id="additionNum" class="form-control" type="number" autofocus="true"  ng-model="model.addition.num"
+                            <input id="additionNum" class="form-control" type="number" autofocus="true"  ng-model="vm.addition.num"
                                    min="0" max="100">
                         </div>
 
                         <fieldset ng-disabled="noAdditionProblems()">
                             <div class="form-group" >
                                 <label for="additionMinValue">Minimum value</label>
-                                <input id="additionMinValue" class="form-control" type="number" ng-model="model.addition.minValue">
+                                <input id="additionMinValue" class="form-control" type="number" ng-model="vm.addition.minValue">
                             </div>
 
                             <div class="form-group">
                                 <label for="additionMaxValue">Maximum value</label>
-                                <input id="additionMaxValue" class="form-control" type="number" ng-model="model.addition.maxValue">
+                                <input id="additionMaxValue" class="form-control" type="number" ng-model="vm.addition.maxValue">
                             </div>
                         </fieldset>
                     </div>
@@ -44,22 +44,22 @@ Home view
                     <div class="col-md-10">
                         <div class="form-group">
                             <label for="subtractionNum">Number of problems</label>
-                            <input id="subtractionNum" class="form-control" type="number" ng-model="model.subtraction.num"
+                            <input id="subtractionNum" class="form-control" type="number" ng-model="vm.subtraction.num"
                                    min="0" max="100">
                         </div>
 
                         <fieldset ng-disabled="noSubtractionProblems()">
                             <div class="form-group">
                                 <label for="subtractionMinValue">Minimum value</label>
-                                <input id="subtractionMinValue" class="form-control" type="number" ng-model="model.subtraction.minValue">
+                                <input id="subtractionMinValue" class="form-control" type="number" ng-model="vm.subtraction.minValue">
                             </div>
                             <div class="form-group">
                                 <label for="subtractionMaxValue">Maximum value</label>
-                                <input id="subtractionMaxValue" class="form-control" type="number" ng-model="model.subtraction.maxValue">
+                                <input id="subtractionMaxValue" class="form-control" type="number" ng-model="vm.subtraction.maxValue">
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" ng-model="model.subtraction.allowNegativeAnswers">
+                                    <input type="checkbox" ng-model="vm.subtraction.allowNegativeAnswers">
                                     Allow negative answers
                                 </label>
                             </div>
