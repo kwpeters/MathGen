@@ -6,6 +6,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "connect": "^2.7.3"
+    "express": "~3.3.4",
+    "minimist": "^0.2.0"
   }
 }
