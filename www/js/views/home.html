@@ -21,7 +21,7 @@ Home view
                                    min="0" max="100">
                         </div>
 
-                        <fieldset ng-disabled="noAdditionProblems()">
+                        <fieldset ng-disabled="additionControlsAreDisabled()">
                             <div class="form-group" >
                                 <label for="additionMinValue">Minimum value</label>
                                 <input id="additionMinValue" class="form-control" type="number" ng-model="vm.addition.minValue">
@@ -48,7 +48,7 @@ Home view
                                    min="0" max="100">
                         </div>
 
-                        <fieldset ng-disabled="noSubtractionProblems()">
+                        <fieldset ng-disabled="subtractionControlsAreDisabled()">
                             <div class="form-group">
                                 <label for="subtractionMinValue">Minimum value</label>
                                 <input id="subtractionMinValue" class="form-control" type="number" ng-model="vm.subtraction.minValue">

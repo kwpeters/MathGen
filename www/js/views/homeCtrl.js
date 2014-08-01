@@ -1,29 +1,27 @@
 /* global angular */
 
-
 angular.module(
     'homeCtrlModule',
     [
+        'ui.router',
         'mathGenModel'
-    ]
-)
+    ])
     .controller(
     'homeCtrl',
     [
-        '$scope', 'mathGenModelSvc',
-        function ($scope, mathGenModelSvc) {
+        '$scope', '$state', 'mathGenModelSvc',
+        function ($scope, $state, mathGenModelSvc) {
             'use strict';
 
-            $scope.noAdditionProblems = function () {
+            $scope.additionControlsAreDisabled = function () {
                 return $scope.vm.addition.num === 0;
             };
 
-            $scope.noSubtractionProblems = function () {
+            $scope.subtractionControlsAreDisabled = function () {
                 return $scope.vm.subtraction.num === 0;
             };
 
             $scope.reset = function () {
-
                 $scope.vm = {addition: {}, subtraction: {}};
                 $scope.vm.addition.num = mathGenModelSvc.getAdditionNum();
                 $scope.vm.addition.minValue = mathGenModelSvc.getAdditionMinValue();
@@ -36,10 +34,19 @@ angular.module(
             };
 
             $scope.submit = function () {
-                // todo:
-                alert('todo: Implement submit().');
+                mathGenModelSvc.setAdditionNum($scope.vm.addition.num);
+                mathGenModelSvc.setAdditionMinValue($scope.vm.addition.minValue);
+                mathGenModelSvc.setAdditionMaxValue($scope.vm.addition.maxValue);
+
+                mathGenModelSvc.setSubtractionNum($scope.vm.subtraction.num);
+                mathGenModelSvc.setSubtractionMinValue($scope.vm.subtraction.minValue);
+                mathGenModelSvc.setSubtractionMaxValue($scope.vm.subtraction.maxValue);
+                mathGenModelSvc.setSubtractionAllowNegativeAnswers($scope.vm.subtraction.allowNegativeAnswers);
+
+                $state.go('output');
             };
 
+            // Set all vm properties according to the model.
             $scope.reset();
         }
     ]
