@@ -1,3 +1,6 @@
+/* global angular */
+
+
 angular.module(
     'homeCtrlModule',
     [
@@ -34,7 +37,7 @@ angular.module(
 
             $scope.submit = function () {
                 // todo:
-                alert('todo: Implement submit().')
+                alert('todo: Implement submit().');
             };
 
             $scope.reset();

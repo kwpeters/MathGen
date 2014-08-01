@@ -1,5 +1,8 @@
+/* global angular */
+
 angular.module('mathGenModel', [])
     .factory('mathGenModelSvc', function () {
+        "use strict";
 
         var data = {
                 config: {
