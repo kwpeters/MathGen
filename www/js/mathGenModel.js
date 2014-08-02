@@ -61,6 +61,5 @@ angular.module('mathGenModel', [])
             data.config.subtraction.allowNegativeAnswers = allowNegativeAnswers;
         };
 
-
         return api;
 });

@@ -1,13 +1,13 @@
 /* global angular */
 
 angular.module(
-    'homeCtrlModule',
+    'homeView',
     [
         'ui.router',
         'mathGenModel'
     ])
     .controller(
-    'homeCtrl',
+    'homeViewCtrl',
     [
         '$scope', '$state', 'mathGenModelSvc',
         function ($scope, $state, mathGenModelSvc) {
@@ -43,7 +43,7 @@ angular.module(
                 mathGenModelSvc.setSubtractionMaxValue($scope.vm.subtraction.maxValue);
                 mathGenModelSvc.setSubtractionAllowNegativeAnswers($scope.vm.subtraction.allowNegativeAnswers);
 
-                $state.go('output');
+                $state.go('outputView');
             };
 
             // Set all vm properties according to the model.

@@ -8,8 +8,8 @@ angular.module(
     'mathGenApp',
     [
         'ui.router',
-        'homeCtrlModule',
-        'outputCtrlModule'
+        'homeView',
+        'outputView'
     ]
 ).config(
     [
@@ -23,19 +23,19 @@ angular.module(
             //delete $httpProvider.defaults.headers.common['X-Requested-With'];
             //$httpProvider.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
-            $stateProvider.state('home', {
-                url: '/home',
-                templateUrl: 'js/views/home.html',
-                controller: 'homeCtrl'
+            $stateProvider.state('homeView', {
+                url: '/homeView',
+                templateUrl: 'js/views/homeView.html',
+                controller: 'homeViewCtrl'
             });
 
-            $stateProvider.state('output', {
-                url: '/output',
-                templateUrl: 'js/views/output.html',
-                controller: 'outputCtrl'
+            $stateProvider.state('outputView', {
+                url: '/outputView',
+                templateUrl: 'js/views/outputView.html',
+                controller: 'outputViewCtrl'
             });
 
-            $urlRouterProvider.otherwise('/home');
+            $urlRouterProvider.otherwise('/homeView');
 
         }
     ]

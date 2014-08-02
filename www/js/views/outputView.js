@@ -1,12 +1,12 @@
 /* global angular */
 
 angular.module(
-    'outputCtrlModule',
+    'outputView',
     [
         'mathGenModel'
     ])
     .controller(
-    'outputCtrl',
+    'outputViewCtrl',
     [
         '$scope', '$state', 'mathGenModelSvc',
         function ($scope, $state, mathGenModelSvc) {
