@@ -8,7 +8,9 @@ angular.module(
     'appModule',
     [
         'ui.router',
-        'homeView'
+        'homeViewModule',
+        'creatorViewModule',
+        'creatorPaletteViewModule'
     ]
 ).config(
     [
@@ -22,11 +24,29 @@ angular.module(
             //delete $httpProvider.defaults.headers.common['X-Requested-With'];
             //$httpProvider.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
-            $stateProvider.state('homeView', {
-                url: '/homeView',
-                templateUrl: 'js/views/homeView.html',
-                controller: 'homeViewCtrl'
-            });
+            $stateProvider.state(
+                'homeView',
+                {
+                    url: '/homeView',
+                    templateUrl: 'js/views/homeView.html',
+                    controller: 'homeViewCtrl'
+                }
+            ).state(
+                'creatorView',
+                {
+                    abstract: true,
+                    url: '/creator',
+                    templateUrl: 'js/views/creatorView.html',
+                    controller: 'creatorViewCtrl'
+                }
+            ).state(
+                'creatorView.palette',
+                {
+                    url:'/palette',
+                    templateUrl: 'js/views/creatorPaletteView.html',
+                    controller:  'creatorPaletteViewCtrl'
+                }
+            );
 
             $urlRouterProvider.otherwise('/homeView');
 

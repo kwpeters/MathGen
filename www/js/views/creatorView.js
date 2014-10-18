@@ -1,8 +1,6 @@
-/* global angular */
-
-angular.module('homeViewModule', [])
+angular.module('creatorViewModule', [])
     .controller(
-    'homeViewCtrl',
+    'creatorViewCtrl',
     [
         //'$scope',
         function (/*$scope*/) {

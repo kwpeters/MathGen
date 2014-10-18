@@ -1,0 +1,60 @@
+<div class="flex-row">
+
+    <div class="flex-item-static flex-column">
+
+        <div class="flex-item-static">
+
+            <h4>Problem Type:</h4>
+            <p>
+                Select a type of math problem to add.
+            </p>
+
+        </div>
+
+        <div class="flex-item-expanding">
+
+            <div class="list-group">
+
+                <a class="list-group-item"
+                   ng-repeat="probType in vm.problemTypes"
+                   ng-href="{{probType.configUrl}}"
+                   ng-class="{active: probType.isSelected}"
+                   ng-click="selectProblemType(probType)">
+
+                    <h4 class="list-group-item-heading">
+                        {{probType.name}}
+                    </h4>
+
+                    <p class="list-group-item-text">
+                        {{probType.desc}}
+                    </p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-item-expanding">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis eaque eius enim eveniet id illo laboriosam, laudantium necessitatibus nihil nobis officia quibusdam quo ratione rerum sapiente sed tempore unde.
+        </p>
+    </div>
+
+</div>
