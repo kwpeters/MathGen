@@ -5,11 +5,10 @@
 /* global angular */
 
 angular.module(
-    'mathGenApp',
+    'appModule',
     [
         'ui.router',
-        'homeView',
-        'outputView'
+        'homeView'
     ]
 ).config(
     [
@@ -27,12 +26,6 @@ angular.module(
                 url: '/homeView',
                 templateUrl: 'js/views/homeView.html',
                 controller: 'homeViewCtrl'
-            });
-
-            $stateProvider.state('outputView', {
-                url: '/outputView',
-                templateUrl: 'js/views/outputView.html',
-                controller: 'outputViewCtrl'
             });
 
             $urlRouterProvider.otherwise('/homeView');

@@ -2,7 +2,7 @@
   "name": "mathGen",
   "version": "0.0.0",
   "authors": [
-    "Kevin Peters <kwpeters@ra.rockwell.com>"
+    "Kevin Peters <kwpeters@gmail.com>"
   ],
   "description": "Generates math problems",
   "main": "index.html",
@@ -24,6 +24,8 @@
     "angular-cookies": "~1.2.21",
     "angular-animate": "~1.2.21",
     "angular-local-storage": "~0.0.5",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "angular-mocks": "~1.2.26",
+    "underscore": "~1.7.0"
   }
 }

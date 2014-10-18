@@ -1,4 +1,3 @@
-MathGen
-=======
+# MathGen
 
-A program to generate math problems
+A program to generate math problems.
